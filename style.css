@@ -1,0 +1,181 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4,
+h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong,
+sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary, time, mark,
+audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+input,
+button {
+	outline: none;
+	background: none;
+	border: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@font-face {
+  font-family: 'rl';
+  src: url("fonts/roboto-light/roboto-light.eot");
+  src: url("fonts/roboto-light/roboto-light.eot?#iefix") format("embedded-opentype"), 
+  url("fonts/roboto-light/roboto-light.woff2") format("woff2"), 
+  url("fonts/roboto-light/roboto-light.woff") format("woff"), 
+  url("fonts/roboto-light/roboto-light.ttf") format("truetype"), 
+  url("fonts/roboto-light/roboto-light.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+#map_img_wrapp {
+	position: relative;
+	width: 1550px; 
+	height: 100%; /*862px*/
+	margin: 0 auto;
+}
+#interactive {
+	position: absolute;
+	pointer-events: none;
+	background: url('img/map_set.png') 0 0 no-repeat;
+}
+#interactive_hover {
+	position: absolute;
+	pointer-events: none;
+	background: url('img/map_set.png') 0 0 no-repeat;
+}
+area {
+	outline: none;
+}
+.card {
+	background-color: rgba(255,255, 255, 0.9);
+	position: absolute;
+	font-size: 12px;
+    border-radius: 4px;
+    padding: 12px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .3s cubic-bezier(.37,1.04,.85,.97);
+}
+a.clinic {
+	display: block;
+	text-decoration: underline;
+	color: #1266b7;
+	margin-bottom: 5px;
+}
+a.clinic:last-child {
+	margin: 0;
+}
+.map {
+	font-family: rl;
+	font-size: 10px;
+	overflow: hidden;
+}
+.mark::before {
+	content: "";
+	display: inline-block;
+	background: url(img/mark.png) 0 0 no-repeat;
+	width: 12px;
+	height: 19px;
+	margin-right: 3px;
+}
+.mark::after {
+	content: "";
+	display: inline-block;
+	background: url(img/mark.png) 0 -19px no-repeat;
+	width: 5px;
+	height: 4px;
+	margin-left: 5px;
+	position: relative;
+	top: -2px;
+}
+.mark 	{
+	position: absolute;
+	cursor: pointer;
+}
+.mark.moscow {
+	top: 380px;
+    left: 233px;
+}
+.mark.mahachkala {
+	top: 696px;
+	left: 186px;
+}
+.mark.krasnodar {
+	top: 622px;
+    left: 71px;
+}
+.mark.volgograd {
+	top: 557px;
+	left: 180px;
+}
+.mark.kazahstan {
+	top: 612px;
+	left: 380px;
+}
+.mark.ekaterinburg {
+	top: 447px;
+	left: 553px;
+}
+.mark.spb {
+	top: 337px;
+	left: 197px;
+}
+.mark.saratov {
+	top: 496px;
+    left: 230px;
+}
+.mark.chelny {
+	top: 549px;
+	left: 356px;
+}
+.mark.irkutsk {
+	top: 619px;
+	left: 1074px;
+}
+.mark.ulyanovsk {
+	display: none;
+}
+.mark.izhevsk {
+	top: 446px;
+	left: 397px;
+}
+.mark.kurgan {
+	top: 562px;
+	left: 549px;
+}
+.mark.chita {
+	top: 690px;
+	left: 1233px;
+}
+.mark.arhangelsk {
+	top: 335px;
+    left: 429px;
+}
