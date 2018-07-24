@@ -39,17 +39,23 @@ map_img_wrapp.onclick = function(e) {
 	        let target_alt = target.getAttribute('alt');
 	        let mark = document.querySelector('p[alt = "'+ target_alt +'"]');
 
-	        let mark_style = window.getComputedStyle(mark),
-				mark_left = Number(mark_style.getPropertyValue('left').replace('px','')),
-				mark_right = mark_left + mark.clientWidth;
+	        let card_left = parseInt(card.style.left.replace('px','')),
+				card_info = card.getBoundingClientRect(),
+				card_right = card_info.width + card_left;
+				
+			let map_wrapper_style = window.getComputedStyle(this),
+				current_position = -parseInt(map_wrapper_style.getPropertyValue('left')) + window.innerWidth;
 
 			if (target.classList.contains('shape')) {
 				let coords = target.getAttribute('coords');
 				let area_position = new AreaParams(coords);
 				
-				if (area_position.right > window.innerWidth || mark_right > window.innerWidth) {
-					map_img_wrapp.style.left = -(area_position.right - window.innerWidth) +'px';
-					console.log(mark_right);
+				if (area_position.right > current_position || card_right > current_position) {
+					if (card_right > area_position.right) {
+						map_img_wrapp.style.left = -(card_right - window.innerWidth) +'px';
+					} else {
+						map_img_wrapp.style.left = -(area_position.right - window.innerWidth) +'px';
+					}	
 				}
 			}
 
